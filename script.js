@@ -19,7 +19,7 @@ function setGrid(gridNumber) {
       childGrid.classList.add("childGrid");
       parentGrid.appendChild(childGrid);
 
-      childGrid.addEventListener('mouseenter', () => {
+      childGrid.addEventListener("mouseenter", () => {
         childGrid.style.backgroundColor = "#000000";
       });
     }
@@ -28,9 +28,11 @@ function setGrid(gridNumber) {
 
 btn.addEventListener("click", () => {
   input = prompt(
-    "Enter the number of square per side you want (e.g 40 wil result on 40x40 grids)"
+    "Enter the number of square per side you want (e.g 40 wil result on 40x40 grids, the limit will be 100x100)"
   );
   input = parseInt(input.trim());
+
+  if (input > 100) input = 100;
 
   cleanGrid();
   setGrid(input);
