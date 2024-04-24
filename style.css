@@ -50,7 +50,3 @@ hr {
 .childGrid {
   flex-grow: 1;
 }
-
-.childGrid:hover {
-  background-color: #000000;
-}

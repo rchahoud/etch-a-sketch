@@ -2,6 +2,12 @@ btn = document.querySelector("button");
 
 const mainDiv = document.querySelector(".main");
 
+function cleanGrid() {
+  while (mainDiv.firstChild) {
+    mainDiv.removeChild(mainDiv.firstChild);
+  }
+}
+
 function setGrid(gridNumber) {
   for (let i = 0; i < gridNumber; i++) {
     const parentGrid = document.createElement("div");
@@ -12,13 +18,11 @@ function setGrid(gridNumber) {
       const childGrid = document.createElement("div");
       childGrid.classList.add("childGrid");
       parentGrid.appendChild(childGrid);
-    }
-  }
-}
 
-function cleanGrid() {
-  while (mainDiv.firstChild) {
-    mainDiv.removeChild(mainDiv.firstChild);
+      childGrid.addEventListener('mouseenter', () => {
+        childGrid.style.backgroundColor = "#000000";
+      });
+    }
   }
 }
 
