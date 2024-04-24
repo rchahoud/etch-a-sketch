@@ -16,13 +16,18 @@ function setGrid(gridNumber) {
   }
 }
 
+function cleanGrid() {
+  while (mainDiv.firstChild) {
+    mainDiv.removeChild(mainDiv.firstChild);
+  }
+}
+
 btn.addEventListener("click", () => {
   input = prompt(
     "Enter the number of square per side you want (e.g 40 wil result on 40x40 grids)"
   );
   input = parseInt(input.trim());
-  console.log(input);
+
+  cleanGrid();
+  setGrid(input);
 });
-
-
-setGrid(20);
