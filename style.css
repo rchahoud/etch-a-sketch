@@ -1,0 +1,58 @@
+/* html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} */
+
+body {
+  display: flex;
+  flex-direction: column; 
+  height: 100vh; 
+  margin: 0; 
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  padding: 18px;
+}
+
+header > div {
+    display: flex;
+    justify-content: center;
+}
+
+button {
+  align-self: center;
+}
+
+hr {
+  margin-bottom: 18px;
+  width: 100%;
+}
+
+.main {
+  display: flex;
+  justify-content: space-between;
+  flex-grow: 1;
+  border: 1px solid #D3D3D3;
+}
+
+.parentGrid {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.childGrid {
+  flex-grow: 1;
+}
+
+
+
+.childGrid:hover {
+    background-color: #000000;
+}
