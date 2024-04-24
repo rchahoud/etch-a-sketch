@@ -1,6 +1,6 @@
-const mainDiv = document.querySelector(".main");
+btn = document.querySelector("button");
 
-let gridNumber = 16;
+const mainDiv = document.querySelector(".main");
 
 function setGrid(gridNumber) {
   for (let i = 0; i < gridNumber; i++) {
@@ -15,5 +15,14 @@ function setGrid(gridNumber) {
     }
   }
 }
+
+btn.addEventListener("click", () => {
+  input = prompt(
+    "Enter the number of square per side you want (e.g 40 wil result on 40x40 grids)"
+  );
+  input = parseInt(input.trim());
+  console.log(input);
+});
+
 
 setGrid(20);
